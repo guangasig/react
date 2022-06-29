@@ -1,8 +1,18 @@
-import {React, useState} from 'react'
+import {React, useEffect, useState} from 'react'
 import From from './components/Form'
 import Notes from './components/Notes';
+import axios from 'axios';
 
 export default function Dashboard(){
+
+    useEffect(()=>{
+        axios.get('http://blogweb.local/api/posts')
+        .then((payload)=>{
+            setNotes(payload.data)
+        }).catch((error)=>{
+            console.log(error);
+        })
+    },[]);
 
     const [notes, setNotes] = useState([
         {id:1, title:'nota1', body:'lorema input'},

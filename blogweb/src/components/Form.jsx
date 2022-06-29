@@ -27,17 +27,17 @@ const From = ({notes, setNotes}) => {
     return (
         <div>
             <form className="box" onSubmit={(ev) => addNotes(ev)}>
-                <fieldset class="">
+                <fieldset>
                     <legend className="title is-5">Crear Notas</legend>
                     <div className="field">
-                        <label class="label">Ingresar el título de la nota</label>
-                        <div class="control">
+                        <label className="label">Ingresar el título de la nota</label>
+                        <div className="control">
                             <input className="input" value={note.title} type="text" onChange={(ev) => setNote({...note,title:ev.target.value})} />
                         </div>
                     </div>
                     <div className="field">
-                        <label class="label">Ingrear el cuerpo de la nota</label>
-                        <div class="control">
+                        <label className="label">Ingrear el cuerpo de la nota</label>
+                        <div className="control">
                             <input className="input" value={note.body} type="text" onChange={(ev) => setNote({...note,body:ev.target.value})}/>
                         </div>
                     </div>

@@ -16,7 +16,7 @@ const Notes = ({notes, setNotes}) => {
 
     return (
         <article className="card">
-            <header class="card-header">
+            <header className="card-header">
                 <p className="card-header-title">Listado de notas</p>
             </header>
             <div className="content">

@@ -30,9 +30,9 @@ const Note = ({note,deleteNote,updateNote}) =>{
                 modeEdit ? 
                 <label className="column">
                     Cuerpo
-                    <input type="text" className="input is-small" value={item.body} onChange={(ev) => setItem({...item,body:ev.target.value})}/>
+                    <input type="text" className="input is-small" value={item.content} onChange={(ev) => setItem({...item,content:ev.target.value})}/>
                 </label>
-                :<div className="column">Cuerpo: {note.body}</div>
+                :<div className="column">Cuerpo: {note.content}</div>
             }
             <div className="column">
                 <button className="button is-primary is-small" onClick={()=>toggle()}>{modeEdit ? 'Cancelar' : 'Edit'}</button>
